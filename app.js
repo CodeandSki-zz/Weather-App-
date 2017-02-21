@@ -5,11 +5,7 @@ $( document ).ready(function() {
         $(".h1city").html(geoCord);
     });
     console.log(geoCord);
-
-
 });
-
-
 
 var str = 'F';
 function ajaxCall() {
