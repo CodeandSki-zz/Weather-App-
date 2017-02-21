@@ -4,7 +4,12 @@ $( document ).ready(function() {
         geoCord = (position.coords.latitude, position.coords.longitude);
         $(".h1city").html(geoCord);
     });
-    console.log(geoCord);
+    alert(geoCord);
+
+
+    var FarenheightButton = document.getElementById('celciusButton');
+    FarenheightButton.addEventListener("click", cleciusChange, false)
+    // target.addEventListener(type, listener[, options]);
 });
 
 var str = 'F';
