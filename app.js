@@ -9,14 +9,7 @@ $( document ).ready(function() {
 });
 
 // var str = 'F';
-// function ajaxCall() {
-//     var xhttp = new XMLHttpRequest();
-//     xhttp.open("POST", api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon});
-//     xhttp.setRequestHeader("Content-type", "application/json");
-//     xhttp.send();
-//     var response = JSON.parse(xhttp.responseText);
-//     console.log(response);
-// }
+
  var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -28,7 +21,7 @@ $( document ).ready(function() {
 function success(pos) {
   var crd = pos.coords;
   console.log('Your current position is:');
-  console.log(`Latitude : ${crd.latitude}`);
+  console.log(crd.latitude);
   console.log(`Longitude: ${crd.longitude}`);
   console.log(`More or less ${crd.accuracy} meters.`);
 };
@@ -52,6 +45,7 @@ function celciusChange() {
     }
 
     var testtt = navigator.geolocation.getCurrentPosition(success, error, options);
+    //Print results to console
     console.log(testtt);
 }
 
@@ -59,4 +53,14 @@ function celciusChange() {
 window.onload=function(){
     var FarenheightButton = document.getElementById('celciusButton');
     FarenheightButton.addEventListener("click", celciusChange, false)
+}
+
+//Ajax call 
+function ajaxCall() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon});
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+    var response = JSON.parse(xhttp.responseText);
+    console.log(response);
 }
