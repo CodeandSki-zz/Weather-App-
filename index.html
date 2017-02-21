@@ -1,0 +1,32 @@
+<html>
+
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type"text/css">
+        <title>Weather App</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="app.js" type="text/javascript">
+        </script>
+    </head>
+    <body style="background-image:url('https://wallpapers.pub/web/wallpapers/glacier-national-park/3840x2160.jpg'); background-size: cover">
+        <div class="headercontiner col-sm-12">
+            <h1>Weather App</h1>
+            <h3>By Big Bear</h3>
+        </div>
+        <div class="metric container-fluid">
+            <button class="btn btn-default celcius" id="celciusButton" onclick="celciusChange(); ajaxCall();">Fahrenheit</h1>
+        </div>
+        <div class="container-fluid main-weather col-sm-12">
+            <div class="city col-sm-2 col-sm-push-3">
+                <h1 class="h1city">Boulder, CO</h2>
+            </div>
+            <div class="temperature col-sm-2 col-sm-push-3">
+                <h1>25&#176;</h2>
+            </div>
+            <div class="wind col-sm-2 col-sm-push-3">
+                <h1>45<sup>mph</sup></h2>
+            </div>
+        </div>
+
+    </body>
+</html>
