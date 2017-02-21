@@ -4,11 +4,8 @@ $( document ).ready(function() {
         geoCord = (position.coords.latitude, position.coords.longitude);
         $(".h1city").html(geoCord);
     });
-    alert(geoCord);
+    // alert(geoCord);
 
-
-
-    // target.addEventListener(type, listener[, options]);
 });
 
 // var str = 'F';
@@ -20,6 +17,25 @@ $( document ).ready(function() {
 //     var response = JSON.parse(xhttp.responseText);
 //     console.log(response);
 // }
+ var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+
+//Successful geolocation//
+function success(pos) {
+  var crd = pos.coords;
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+};
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+};
 
 //Change Between Celcius and Farenheight and Claculate new Temperature
 function celciusChange() {
@@ -28,15 +44,18 @@ function celciusChange() {
     var temperature = "";
     if (celcius.innerHTML == 'Fahrenheit') {
         var temperature = 'far';
-        console.log(temperature);
         celcius.innerHTML = ('Celcius');
     }
     else {
         var temperature = 'cel';
-        console.log(temperature);
         celcius.innerHTML = ('Fahrenheit');
     }
+
+    var testtt = navigator.geolocation.getCurrentPosition(success, error, options);
+    console.log(testtt);
 }
+
+//Onload function//
 window.onload=function(){
     var FarenheightButton = document.getElementById('celciusButton');
     FarenheightButton.addEventListener("click", celciusChange, false)
