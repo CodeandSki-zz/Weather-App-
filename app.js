@@ -8,7 +8,8 @@ $( document ).ready(function() {
 
 });
 
-// var str = 'F';
+ var latitude = '';
+ var longitude = '';
 
  var options = {
   enableHighAccuracy: true,
@@ -55,10 +56,10 @@ window.onload=function(){
     FarenheightButton.addEventListener("click", celciusChange, false)
 }
 
-//Ajax call 
+//Ajax call
 function ajaxCall() {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon});
+    xhttp.open("POST", api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={lon});
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send();
     var response = JSON.parse(xhttp.responseText);
