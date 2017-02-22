@@ -57,12 +57,12 @@ window.onload=function(){
 
     function ajaxCall() {
         var xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "http://api.openweathermap.org/data/2.5/weather?zip=94040,us");
+        xhttp.open("POST", "http://api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}");
         xhttp.setRequestHeader("Content-type", "application/json");
         xhttp.send();
         var response = JSON.parse(xhttp.responseText);
         console.log(response);
-        
+
     }
 
 }
