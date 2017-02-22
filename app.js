@@ -53,15 +53,18 @@ function celciusChange() {
 //Onload function//
 window.onload=function(){
     var FarenheightButton = document.getElementById('celciusButton');
-    FarenheightButton.addEventListener("click", celciusChange, false)
+    FarenheightButton.addEventListener("click", celciusChange, false);
+
+    function ajaxCall() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "http://api.openweathermap.org/data/2.5/weather?zip=94040,us");
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send();
+        var response = JSON.parse(xhttp.responseText);
+        console.log(response);
+        
+    }
+
 }
 
 //Ajax call
-function ajaxCall() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={lon});
-    xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send();
-    var response = JSON.parse(xhttp.responseText);
-    console.log(response);
-}
