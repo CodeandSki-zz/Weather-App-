@@ -17,14 +17,17 @@ $( document ).ready(function() {
   maximumAge: 0
 };
 
-
+var test="";
 //Successful geolocation//
 function success(pos) {
   var crd = pos.coords;
-  console.log('Your current position is:');
-  console.log(crd.latitude);
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
+  // console.log('Your current position is:');
+  // console.log(crd.latitude);
+  // console.log(`Longitude: ${crd.longitude}`);
+  // console.log(`More or less ${crd.accuracy} meters.`);
+
+  var test = crd.latitude;
+  console.log(test);
 };
 
 function error(err) {
@@ -66,5 +69,3 @@ window.onload=function(){
     }
 
 }
-
-//Ajax call
