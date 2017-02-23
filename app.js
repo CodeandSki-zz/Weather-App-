@@ -28,7 +28,7 @@ function success(pos) {
   // console.log(`More or less ${crd.accuracy} meters.`);
 
   var latitude = crd.latitude;
-  var longitude = crd.latitude;
+  var longitude = crd.longitude;
   // console.log(test);
 };
 
