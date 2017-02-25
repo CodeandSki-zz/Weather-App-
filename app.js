@@ -54,6 +54,8 @@ function celciusChange() {
     //Print results to console
     console.log(testtt);
 
+    
+
     function ajaxCall() {
         var xhttp = new XMLHttpRequest();
         xhttp.open("POST", "api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}");
