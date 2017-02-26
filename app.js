@@ -1,9 +1,13 @@
 $( document ).ready(function() {
+
+    var FarenheightButton = document.getElementById('celciusButton');
+    FarenheightButton.addEventListener("click", celciusChange, false);
+
     var geoCord = "";
-    navigator.geolocation.getCurrentPosition(function(position) {
-        geoCord = (position.coords.latitude, position.coords.longitude);
-        $(".h1city").html(geoCord);
-    });
+    // navigator.geolocation.getCurrentPosition(function(position) {
+    //     geoCord = (position.coords.latitude, position.coords.longitude);
+    //     $(".h1city").html(geoCord);
+    // });
     // alert(geoCord);
 
 });
@@ -20,12 +24,12 @@ $( document ).ready(function() {
 var latitude="";
 var longitude="";
 //Successful geolocation//
-function success(pos) {
+ function success(pos) {
   var crd = pos.coords;
-  // console.log('Your current position is:');
-  // console.log(crd.latitude);
-  // console.log(`Longitude: ${crd.longitude}`);
-  // console.log(`More or less ${crd.accuracy} meters.`);
+  console.log('Your current position is:');
+  console.log(crd.latitude);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
 
   var latitude = crd.latitude;
   var longitude = crd.longitude;
@@ -54,24 +58,23 @@ function celciusChange() {
     //Print results to console
     console.log(testtt);
 
-    
 
-    function ajaxCall() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}");
-        xhttp.setRequestHeader("Content-type", "application/json");
-        xhttp.send();
-        var response = JSON.parse(xhttp.responseText);
-        console.log(response);
 
-    }
+    // function ajaxCall() {
+    //     var xhttp = new XMLHttpRequest();
+    //     xhttp.open("POST", "api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}");
+    //     xhttp.setRequestHeader("Content-type", "application/json");
+    //     xhttp.send();
+    //     var response = JSON.parse(xhttp.responseText);
+    //     console.log(response);
+    //
+    // }
 
 }
 
 //Onload function//
-window.onload=function(){
-    var FarenheightButton = document.getElementById('celciusButton');
-    FarenheightButton.addEventListener("click", celciusChange, false);
-
-
-}
+// window.onload=function(){
+//
+//
+//
+// }
