@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://wallpapers.pub/web/wallpapers/glacier-national-park/3840x2160.jpg");
+    /*background-image: url("https://wallpapers.pub/web/wallpapers/glacier-national-park/3840x2160.jpg");*/
     color: white;
     text-align: center;
 }
@@ -34,19 +34,19 @@ body {
 }
 
 .city {
-    color: white;
+    color: red;
     /*border: 1px solid green;*/
     box-shadow: 1px 1px 1px 10px white;
 }
 
 .temperature {
-    color: white;
+    color: red;
     /*border: 1px solid green;*/
     box-shadow: 1px 1px 1px 10px white;
 }
 
 .wind {
-    color: white;
+    color: red;
     /*border: 1px solid green;*/
     box-shadow: 1px 1px 1px 10px white;
 }
