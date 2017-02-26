@@ -1,13 +1,20 @@
 $( document ).ready(function() {
-
+    var latitude = '';
+    var longitude = '';
+    var changeCity = '';
     var FarenheightButton = document.getElementById('celciusButton');
     FarenheightButton.addEventListener("click", celciusChange, false);
 
     //Change Between Celcius and Farenheight and Claculate new Temperature
     function celciusChange() {
-
+        var options = {
+          enableHighAccuracy: true,
+          timeout: 7000,
+          maximumAge: 0
+        };
         var celcius = document.getElementById('celciusButton');
         var temperature = "";
+
         if (celcius.innerHTML == 'Fahrenheit') {
             var temperature = 'far';
             celcius.innerHTML = ('Celcius');
@@ -27,28 +34,22 @@ $( document ).ready(function() {
       console.log(crd.latitude);
       console.log(`Longitude: ${crd.longitude}`);
       console.log(`More or less ${crd.accuracy} meters.`);
-
       var latitude = crd.latitude;
       var longitude = crd.longitude;
-      // console.log(test);
+      var changeCity = document.getElementById('city');
+      ;
     };
 
+    //Error reporting
     function error(err) {
       console.warn(`ERROR(${err.code}): ${err.message}`);
     };
+
+
 });
 
- var latitude = '';
- var longitude = '';
 
- var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
 
-var latitude="";
-var longitude="";
 
 
 
