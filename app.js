@@ -37,13 +37,23 @@ $( document ).ready(function() {
       var latitude = crd.latitude;
       var longitude = crd.longitude;
       var changeCity = document.getElementById('city');
-      ;
+      ajaxCall(latitude, longitude);
     };
 
     //Error reporting
     function error(err) {
       console.warn(`ERROR(${err.code}): ${err.message}`);
     };
+
+    function ajaxCall(latitude, longitude) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude, true);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send();
+        var response = JSON.parse(xhttp.responseText);
+        // console.log(response);
+
+    }
 
 
 });
@@ -55,15 +65,6 @@ $( document ).ready(function() {
 
 
 
-    // function ajaxCall() {
-    //     var xhttp = new XMLHttpRequest();
-    //     xhttp.open("POST", "api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}");
-    //     xhttp.setRequestHeader("Content-type", "application/json");
-    //     xhttp.send();
-    //     var response = JSON.parse(xhttp.responseText);
-    //     console.log(response);
-    //
-    // }
 
 
 
