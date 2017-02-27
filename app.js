@@ -45,14 +45,14 @@ $( document ).ready(function() {
       console.warn(`ERROR(${err.code}): ${err.message}`);
     };
 
+    //API Call
     function ajaxCall(latitude, longitude) {
         var xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude, true);
+        xhttp.open("POST", "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude);
         xhttp.setRequestHeader("Content-type", "application/json");
         xhttp.send();
         var response = JSON.parse(xhttp.responseText);
         // console.log(response);
-
     }
 
 
