@@ -45,6 +45,7 @@ $( document ).ready(function() {
       console.warn(`ERROR(${err.code}): ${err.message}`);
     };
 
+
     //API Call
     function ajaxCall(latitude, longitude) {
         var xhttp = new XMLHttpRequest();
@@ -52,7 +53,7 @@ $( document ).ready(function() {
         xhttp.setRequestHeader("Content-type", "application/json");
         xhttp.send();
         var response = JSON.parse(xhttp.responseText);
-        // console.log(response);
+        console.log(response);
     }
 
 
