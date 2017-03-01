@@ -55,6 +55,7 @@ $( document ).ready(function() {
         var response = JSON.parse(xhttp.responseText);
         console.log(response);
         console.log(xhttp);
+        console.log(xhttp.response);
     }
 
 
