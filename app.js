@@ -46,14 +46,14 @@ $( document ).ready(function() {
     };
 
 
-    //API Call
+    //API Call to Open Weather
     function ajaxCall(latitude, longitude) {
         var xhttp = new XMLHttpRequest();
         xhttp.open("POST", "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude);
         xhttp.setRequestHeader("Content-type", "application/json");
         xhttp.send();
         var response = JSON.parse(xhttp.responseText);
-        
+
 
     }
 
