@@ -58,6 +58,9 @@ $( document ).ready(function() {
     }
 
 
+    console.log(latitude, longitude);
+
+
 });
 
 
