@@ -59,6 +59,7 @@ $( document ).ready(function() {
 
 
     console.log(latitude, longitude);
+    alert('Friends and family, we have liftoff');
 
 
 });
