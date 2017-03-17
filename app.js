@@ -5,6 +5,13 @@ $( document ).ready(function() {
     var FarenheightButton = document.getElementById('celciusButton');
     FarenheightButton.addEventListener("click", celciusChange, false);
 
+    function testing(event) {
+        const boom = window.document;
+        boom.addEventListener('onunload', function() {
+            console.log('are you sure you want to leave?');
+        })
+    }
+
     //Change Between Celcius and Farenheight and Claculate new Temperature
     function celciusChange() {
         var options = {
