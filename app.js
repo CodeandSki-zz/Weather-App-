@@ -7,8 +7,8 @@ $( document ).ready(function() {
 
     function testing(event) {
         const boom = window.document;
-        boom.addEventListener('onunload', function() {
-            console.log('are you sure you want to leave?');
+        boom.addEventListener("onunload", function() {
+            alert('are you sure you want to leave?');
         })
     }
 
