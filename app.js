@@ -31,6 +31,8 @@ $( document ).ready(function() {
             celcius.innerHTML = ('Fahrenheit');
         }
         var testtt = navigator.geolocation.getCurrentPosition(success, error, options);
+        console.log(testtt);
+        console.log(temperature);
     }
 
 
