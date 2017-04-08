@@ -6,8 +6,8 @@ $( document ).ready(function() {
     FarenheightButton.addEventListener("click", celciusChange, false);
 
     function testing(event) {
-        const boom = window.document;
-        boom.addEventListener("onunload", function() {
+        const windowMain = window.document;
+        windowMain.addEventListener("onunload", function() {
             alert('are you sure you want to leave?');
         })
     }
@@ -21,6 +21,8 @@ $( document ).ready(function() {
         };
         var celcius = document.getElementById('celciusButton');
         var temperature = "";
+
+
 
         if (celcius.innerHTML == 'Fahrenheit') {
             var temperature = 'far';
