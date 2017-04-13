@@ -20,9 +20,6 @@ $( document ).ready(function() {
           maximumAge: 0
         };
         var celcius = document.getElementById('celciusButton');
-        var temperature = "";
-
-
 
         if (celcius.innerHTML == 'Fahrenheit') {
             var temperature = 'far';
@@ -37,7 +34,6 @@ $( document ).ready(function() {
         console.log(temperature);
     }
 
-
     //Successful geolocation//
      function success(pos) {
       var crd = pos.coords;
@@ -51,7 +47,7 @@ $( document ).ready(function() {
       ajaxCall(latitude, longitude);
     };
 
-    //Error reporting
+    //Error reporting for the grab geocoordinates function
     function error(err) {
       console.warn(`ERROR(${err.code}): ${err.message}`);
     };
@@ -64,36 +60,9 @@ $( document ).ready(function() {
         xhttp.setRequestHeader("Content-type", "application/json");
         xhttp.send();
         var response = JSON.parse(xhttp.responseText);
-
-
-    }
-
-
-    console.log(latitude, longitude);
-    alert('Friends and family, we have liftoff');
+        console.log(response, "This is the JSON response");
+}
+        console.log(latitude, longitude);
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Onload function//
-// window.onload=function(){
-//
-//
-//
-// }
