@@ -52,6 +52,10 @@ $( document ).ready(function() {
       console.warn(`ERROR(${err.code}): ${err.message}`);
     };
 
+    function debugTesting(e) {
+        console.log(e.target.value);
+    };
+
 
     //API Call to Open Weather
     function ajaxCall(latitude, longitude) {
