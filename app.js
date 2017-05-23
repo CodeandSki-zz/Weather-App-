@@ -32,6 +32,7 @@ $( document ).ready(function() {
         var testtt = navigator.geolocation.getCurrentPosition(success, error, options);
         console.log(testtt);
         console.log(temperature);
+        console.log(options);
     }
 
     //Successful geolocation//
