@@ -33,6 +33,7 @@ $( document ).ready(function() {
         console.log(testtt);
         console.log(temperature);
         console.log(options);
+        console.log(testtt);
     }
 
     //Successful geolocation//
